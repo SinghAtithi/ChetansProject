@@ -6,6 +6,7 @@ import Atcoder from './atcoder'
 
 
 const UserHandles = (user) => {
+  user = user.user;
   return (
     <div className='handles-container'>
       <div className='sub-container'>

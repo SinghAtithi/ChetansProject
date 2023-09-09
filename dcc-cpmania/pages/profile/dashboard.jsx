@@ -9,6 +9,7 @@ import {
 import UserHandles from "./userHandles";
 
 const Dashboard = (user) => {
+  user = user.user;
   return (
     <div id="dashboard">
       <div className="userInfo">

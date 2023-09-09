@@ -8,23 +8,24 @@ import axios from "axios";
 
 const Profile = () => {
   const [isvalid, setIsvalid] = useState(false);
-  
+
   const [user, setUser] = useState({});
-  
+
   const [isLoading, setIsLoading] = useState(false);
-  const fetchData=async(username)=>{
+  const fetchData = async (username) => {
     setIsLoading(true);
-    await axios.get( `${Base_Url}/profile/${username}`).then((res)=>{
-      const {data}=res
-      if(data.success==true){
+    await axios.get(`${Base_Url}/profile/${username}`).then((res) => {
+      const data = res.data
+      // console.log(data);
+      if (data.success == true) {
         setIsvalid(true);
         setUser(data.user);
       }
-      else{
+      else {
         setIsvalid(false);
       }
       setIsLoading(false);
-    }).catch((err)=>{
+    }).catch((err) => {
       setIsLoading(false);
       console.error("Error fetching user data:", err);
     })
@@ -35,7 +36,7 @@ const Profile = () => {
     var lastSegment = urlSegments
       .filter((segment) => segment !== "" && segment.indexOf("#") !== 0)
       .pop();
-      fetchData(lastSegment);
+    fetchData(lastSegment);
   }, []);
 
 
