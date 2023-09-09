@@ -14,7 +14,7 @@ const Dashboard = (user) => {
     <div id="dashboard">
       <div className="userInfo">
         <div className="userAvatar">
-          <img src={user.profile_pic} alt="user avatar" />
+          <img src={user && user.profile_pic} alt="user avatar" />
         </div>
         <div className="userName" >{user.username}</div>
         <div className="name">{user.name}</div>
