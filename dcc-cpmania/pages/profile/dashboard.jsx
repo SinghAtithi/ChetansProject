@@ -8,7 +8,7 @@ import {
 } from "react-icons/si";
 import UserHandles from "./userHandles";
 
-const Dashboard = ({user}) => {
+const Dashboard = (user) => {
   return (
     <div id="dashboard">
       <div className="userInfo">
