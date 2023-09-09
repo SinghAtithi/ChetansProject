@@ -5,7 +5,7 @@ import Leetcode from './leetcode'
 import Atcoder from './atcoder'
 
 
-const UserHandles = ({user}) => {
+const UserHandles = (user) => {
   return (
     <div className='handles-container'>
       <div className='sub-container'>
